@@ -1,0 +1,50 @@
+[
+    {
+        "id":0,
+        "name": "Product 1",
+        "imgSrc": "https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "like":false,
+        "number":0,
+        "price":20
+    },
+    {
+        "id":1,
+        "name": "Product 2",
+        "imgSrc": "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "like":false,
+        "number":0,
+        "price":35
+    },
+    {
+        "id":2,
+        "name": "Product 3",
+        "imgSrc": "https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "like":false,
+        "number":0,
+        "price":122
+    },
+    {
+        "id":3,
+        "name": "Product 4",
+        "imgSrc": "https://images.pexels.com/photos/276534/pexels-photo-276534.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "like":false,
+        "number":0,
+        "price":99
+    },
+    {
+        "id":3,
+        "name": "Product 5",
+        "imgSrc": "https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "like":false,
+        "number":0,
+        "price":78
+    },
+    {
+        "id":3,
+        "name": "Product 6",
+        "imgSrc": "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "like":false,
+        "number":0,
+        "price":939
+    }
+]
