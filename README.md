@@ -1,4 +1,3 @@
-
 # Git commande line
 
 ```bash
@@ -13,9 +12,9 @@ git commit -m "<message>"
 git remote add origin <remote_url>
 
 # Push branch to remote repository
-git push origin <branche_name>
+git push origin <branche_title>
 
 # Create branch and switch to it
-git checkout -b <branche_name>
+git checkout -b <branche_title>
 
 ```
