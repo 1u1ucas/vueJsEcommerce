@@ -2,26 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta title="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
   </head>
   <body>
-    <div class="imgBack" style="background-image: url('moi.jpg')">
-    <div class="post">
-        <div class="top">
-        <div class="price">
-            <p class="text">24</p>
+    <div id="app">
+      <div class="navbar"></div>
+      <main>
+        <div id="product" class="container">
+          <div v-for="(item, index) in productData">
+            <div v-bind:key="index">
+              <product
+                :title="item.title"
+                :image="item.image"
+                :price="item.price"
+                :index="index"
+                :like="item.like"
+                :quantity="item.quantity"
+                @add-to-basket="addToBasket"
+                @like-product="likeProduct"
+              >
+              </product>
+            </div>
+          </div>
         </div>
+        <div id="basket" class="container">
+          <div class="basket">
+            <div class="basket-header">
+              <h1>Your Basket</h1>
+            </div>
+            <div class="basket-content">
+              <basket
+                v-for="(item, index) in basketData"
+                :index="index"
+                :title="item.title"
+                :image="item.image"
+                :price="item.price"
+                :quantity="item.quantity"
+                :like="item.like"
+                @increment="increment"
+                @decrement="decrement"
+                @remove="remove"
+              ></basket>
+            </div>
+            <div class="basket-footer">
+              <p>Total: {{ total }}</p>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="bottom">
-        <a class="like">
-            <img src="" alt="">
-        </a>
-        <a class="buy">
-            <img src="" alt="">
-        </a>
-        <div id="app"></div>
+      </main>
     </div>
 
     <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
