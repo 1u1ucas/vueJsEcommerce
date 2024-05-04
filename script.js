@@ -61,5 +61,11 @@ const vm = Vue.createApp({
         0
       );
     },
+    isAnyProductLiked() {
+      return this.productData.some((product) => product.like);
+    },
+    isAnyProductInBasket() {
+      return this.basketData.length > 0;
+    },
   },
 }).mount("#app");
