@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 a {
@@ -32,12 +33,17 @@ main {
   flex-direction: row;
   justify-content: space-around;
   padding: 20px;
+  margin-top: 40px;
+  overflow: hidden;
 }
 
 .container {
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 93vh;
+  overflow: auto;
 }
 
 #product {
@@ -152,7 +158,7 @@ main {
 .img-basket {
   height: 100px;
   width: 100px;
-  background-size: cover;
+  object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;

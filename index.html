@@ -17,13 +17,11 @@
     <div id="app">
       <div class="navbar">
         <div class="navbar-like toolTip">
-          <i class="fas fa-heart"></i>
-          <span>{{ likeCount }}</span>
+          <i @click="sortLikedProducts" class="fas fa-heart"></i>
           <div v-if="isAnyProductLiked" class="redDot"></div>
         </div>
         <div class="navbar-basket toolTip">
-          <i class="fas fa-shopping-basket"></i>
-          <span>{{ basketCount }}</span>
+          <i @click="sortBasketProducts" class="fas fa-shopping-basket"></i>
           <div v-if="isAnyProductInBasket" class="redDot"></div>
         </div>
       </div>
