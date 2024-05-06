@@ -53,6 +53,12 @@ const vm = Vue.createApp({
       this.basketData[index].quantity = 0;
       this.basketData.splice(index, 1);
     },
+    sortLikedProducts() {
+      this.productData.sort((a, b) => b.like - a.like);
+    },
+    sortBasketProducts() {
+      this.productData.sort((a, b) => b.quantity - a.quantity);
+    },
   },
   computed: {
     total() {
@@ -60,6 +66,12 @@ const vm = Vue.createApp({
         (sum, item) => sum + item.quantity * item.price,
         0
       );
+    },
+    isAnyProductLiked() {
+      return this.productData.some((product) => product.like);
+    },
+    isAnyProductInBasket() {
+      return this.basketData.length > 0;
     },
   },
 }).mount("#app");

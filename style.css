@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 a {
@@ -15,11 +16,15 @@ button {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px 20px;
   background-color: #333;
+  gap: 40px;
   color: white;
 }
 
@@ -28,12 +33,17 @@ main {
   flex-direction: row;
   justify-content: space-around;
   padding: 20px;
+  margin-top: 40px;
+  overflow: hidden;
 }
 
 .container {
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 93vh;
+  overflow: auto;
 }
 
 #product {
@@ -148,7 +158,7 @@ main {
 .img-basket {
   height: 100px;
   width: 100px;
-  background-size: cover;
+  object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;
@@ -204,4 +214,21 @@ main {
   padding: 10px;
   background-color: #333;
   color: white;
+}
+
+.toolTip {
+  position: relative;
+}
+
+.toolTip .redDot {
+  visibility: visible;
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  left: 60%;
 }
